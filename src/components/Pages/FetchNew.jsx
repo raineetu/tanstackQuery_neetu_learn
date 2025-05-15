@@ -13,6 +13,7 @@ const FetchNew = () => {
     queryKey: ["posts"], //Automatically cached by key...even if we use in another component then it fetch the cached data instead of erfetching
     queryFn: fetchPosts,
     // refetchInterval: 1000, //refetch every 1 sec
+    refetchIntervalInBackground: true, //refetch even if the user switch tabs
     // refetchOnWindowFocus: true, //if user switches tabs and returns, React Query silently refetches data in the background
     // gcTime: 1000, //garbage collection time or cache time by default 5 min
     staleTime: 5000,
