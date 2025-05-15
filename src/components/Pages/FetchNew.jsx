@@ -14,6 +14,7 @@ const FetchNew = () => {
     queryFn: fetchPosts,
     refetchInterval: 1000, //refetch every 1 sec
     refetchOnWindowFocus: true, //if user switches tabs and returns, React Query silently refetches data in the background
+    gcTime: 1000, //garbage collection time or cache time by default 5 min
   });
 
   if (isLoading) return <p>Loading...</p>;
